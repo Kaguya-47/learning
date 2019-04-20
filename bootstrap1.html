@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <title>Homes</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="homes.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+<div class="full">
+    <span class="menu"></span>
+    <div class="navbar navbar-inverse">
+
+        <div class="navbar">
+            <a class="menu"><i class="icon-align-justify"></i></a>
+            <div class="navtab">
+            <div class="linkme" id="n1"><br><br><span class="navber-font"><a class="link-new" id="a1" href="#">H<br>O<br>M<br>E</a></span></div>
+            <div class="linkme" name="n2"><br><br><span class="navber-font"><a class="link-new" name="a2" href="#">H<br>O<br>M<br>E</a></span></div>
+            <div class="linkme" name="n1"><br><br><span class="navber-font"><a class="link-new" name="a1" href="#">H<br>O<br>M<br>E</a></span></div>
+            <div class="linkme" name="n1"><br><br><span class="navber-font"><a class="link-new" name="a1" href="#">H<br>O<br>M<br>E</a></span></div>
+            <div class="linkme" name="n1"><br><br><span class="navber-font"><a class="link-new" name="a1" href="#">H<br>O<br>M<br>E</a></span></div>
+            <div class="linkme" name="n1"><br><br><span class="navber-font"><a class="link-new" name="a1" href="#">H<br>O<br>M<br>E</a></span></div>
+            </div>
+            <!--<script>-->
+                <!--$(document).ready(function () {-->
+                    <!--$(".linkme").hover(function (){-->
+                        <!--$(".linkme").css("background-color","#28282f");-->
+                        <!--$(".link-new").css("color","#18a3b7");-->
+                    <!--})-->
+                <!--})-->
+            <!--</script>-->
+        </div>
+        <script>
+            $( "span.menu" ).click(function() {
+                $( ".navbar" ).slideToggle( "slow", function() {
+                });
+            });
+            $(document).ready(function () {
+                $(".menu").click(function () {
+                    $(".navtab").toggle();
+                })
+            })
+        </script>
+        </ul>
+    </div>
+    <div class="main">
+
+        <div class="header" id="home">
+            <img src="images/banner3.jpg"style="width: 100%;height: 100%">
+        </div>
+        <div class="about" style="background-color: #232323">
+            <div class="second-head">
+            <h3>About</h3>
+            <p>Duis autem vel eum iriure dolor in hendrerit,Ut wisi enim ad minim veniam, quis nostrud.We Provide Worlds top fashion for less fashionpress.</p>
+            </div>
+        </div>
+        <div class="trends">
+            <div class="second-head" >
+                <h3>Trendz</h3>
+                <p> Duis autem vel eum iriure dolor in hendrerit,Ut wisi enim ad minim veniam, quis nostrud.We Provide Worlds top fashion for less fashionpress.</p>
+            </div>
+            <div class="grid">
+                <figure class="effect-terry" name="f1">
+                    <img src="images/t1.jpg" class="img-responsive">
+                </figure>
+                <figure class="effect-terry"><img src="images/t2.jpg" class="img-responsive" id="i1"></figure>
+                <figure class="effect-terry"><img src="images/t3.jpg" class="img-responsive"></figure>
+                <figure class="effect-terry"><img src="images/t5.jpg" class="img-responsive"></figure>
+                <figure class="effect-terry"><img src="images/t6.jpg" class="img-responsive"></figure>
+            </div>
+            <div class="clearfix"> </div>
+
+    </div>
+        <div id="myModal" class="modal">
+            <span class="close">x</span>
+            <img class="modal-content" id="img01">
+        </div>
+        <script>
+            var modal=document.getElementById('myModal');
+            var img=new Array();
+            img=document.getElementsByClassName('img-responsive');
+            var modalImg = document.getElementById('img01');
+            for(var i=0;i<img.length;i++)
+            {
+                img[i]=document.getElementsByClassName('img-responsive')[i];
+                img[i].onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            }
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
+        <div class="featured-section"style="width: 100%;height: 150px;">
+            <div class="second-head" style="text-align: center;padding:0">
+                <h3>A SOURCE OF THE LATEST FASHION NEWS & TRENDS</h3>
+                <p>Duis autem vel eum iriure dolor in hendrerit,Ut wisi enim ad minim veniam, quis nostrud.We Provide Worlds top fashion for less fashionpress.</p>
+            </div>
+            <div class="col-md-6" ></div>
+            <div class="col-md-6" ></div>
+        </div>
+        <div class="bottom-section">
+            <div class="second-head">
+
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="second-head">
+
+            </div>
+        </div>
+        <!--/start-footer-section-->
+        <div class="footer-section">
+            <div class="footer-grids">
+                <div class="col-md-3 footer-grid">
+                    <h4>About</h4>
+                    <div class="border2"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+                    <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+                </div>
+                <div class="col-md-3 footer-grid tags">
+                    <h4>the tags</h4>
+                    <div class="border2"></div>
+                    <ul class="tag">
+                        <li><a href="#">Model</a></li>
+                        <li><a href="#">Awesome</a></li>
+                        <li><a href="#">Model</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Model</a></li>
+                        <li><a href="#">Awesome</a></li>
+                        <li><a href="#">Model</a></li>
+                        <li><a href="#">Model</a></li>
+                        <li><a href="#">Awesome</a></li>
+                        <li><a href="#">Model</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-grid tweet">
+                    <h4>latest tweets</h4>
+                    <div class="border2"></div>
+                    <div class="icon-3-square"> <a href="#"><i class="square-3"></i></a> </div>
+                    <div class="icon-text">
+                        <p>I like this Lorem ipsum dolor sit amet <a href="mailto:info@example.com">mail@example.com</a></p>
+                        <h5>About 15 mins</h5>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="icon-3-square"> <a href="#"><i class="square-3"></i></a> </div>
+                    <div class="icon-text">
+                        <p>I like this Lorem ipsum dolor sit amet <a href="mailto:info@example.com">mail@example.com</a></p>
+                        <h5>About 30 mins</h5>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-3 footer-grid flickr">
+                    <h4>flickr feed</h4>
+                    <div class="border2"></div>
+                    <div class="flickr-grids">
+                        <div class="flickr-grid"> <a href="#"><img src="images/t3.jpg" alt=""/></a> </div>
+                        <div class="flickr-grid"> <a href="#"><img src="images/t2.jpg" alt=""/></a> </div>
+                        <div class="flickr-grid"> <a href="#"><img src="images/t2.jpg" alt=""/></a> </div>
+                        <div class="clearfix"> </div>
+                        <div class="flickr-grid"> <a href="#"><img src="images/t5.jpg" alt=""/></a> </div>
+                        <div class="flickr-grid"> <a href="#"><img src="images/t3.jpg" alt=""/></a> </div>
+                        <div class="flickr-grid"> <a href="#"><img src="images/t5.jpg" alt=""/></a> </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2017.Company name All rights reserved.</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
+<!--start-smoth-scrolling-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+</script>
+
+</body>
+</html>
