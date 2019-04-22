@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<!--轮播图-->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="image/h1.jpg" style="width:100%">
+            <a class="prev" onclick="previmg(1)"><</a>
+            <a class="next" onclick="nextimg(0)">></a>
+        </div>
+        <div class="mySlides">
+            <img src="image/h2.jpg" style="width:100%">
+            <a class="prev" onclick="previmg(1)"><</a>
+            <a class="next" onclick="nextimg(1)">></a>
+        </div>
+        <div class="mySlides">
+            <img src="image/h3.jpg" style="width:100%">
+            <a class="prev" onclick="previmg(2)"><</a>
+            <a class="next" onclick="nextimg(2)">></a>
+        </div>
+        <div class="mySlides">
+            <img src="image/h4.jpg" style="width:100%">
+            <a class="prev" onclick="previmg(3)"><</a>
+            <a class="next" onclick="nextimg(2)">></a>
+        </div>
+    </div>
+<!--图下导航-->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!--JS-->
+    <script>
+        var cs=new Array();
+        cs=document.getElementsByClassName("dot");
+        var p=document.getElementsByClassName("prev");
+        var n=document.getElementsByClassName("next");
+        function previmg(n){
+            currentSlide(n-1)
+        }
+        function nextimg(n) {
+            currentSlide(n+1)
+        }
+            document.getElementsByClassName("mySlides")[0].style.display = "block";
+        for(var i=0;i<cs.length;i++)
+        {
+            cs[i]=document.getElementsByClassName("dot")[i];
+            function currentSlide(i) {
+                for (var j = 0; j < cs.length; j++) {
+                    document.getElementsByClassName("mySlides")[j].style.display = "none";
+                    cs[j].className=cs[j].className.replace(" active","");
+                }
+                ;
+                document.getElementsByClassName("mySlides")[i].style.display = "block";
+                cs[i].className+=" active";
+            }
+        }
+
+
+    </script>
+    </body>
+</html>
